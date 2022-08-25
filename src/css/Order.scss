@@ -1,0 +1,236 @@
+$Blue: #00BFFF;
+
+// mixin 안에 속성들을 @include '이름' 을 부여하여 속성 전달 가능
+ @mixin order-wrap() {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 45rem;
+    height: auto;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 2em;
+    overflow: hidden;
+    z-index: 9999;
+ }
+
+.order-wrap {
+    @include order-wrap();
+
+    hr {
+        opacity: 0.5;
+    }
+
+    .order-title {
+        font-size: 3em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+
+        b {
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+    }
+
+
+    .item {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+  
+
+    .bookImg {
+        width: 12em;
+        margin-right: 1.5em;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .content {
+
+        line-height: 3em;
+        margin-left: 0.5em;
+
+        .bookTitle {
+            font-size: 1.8em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 26rem;
+        };
+
+        .bookPrice {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: $Blue;
+            .price-text {
+                font-size: 1em;
+                color: #c0c0c0;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    .icon {
+        span {
+        cursor: pointer;
+        line-height: 4.6em;
+        margin-left: 0.2em;
+
+        &:hover {
+            transition: 0.5s;
+            color: $Blue;
+        }
+
+        &:active {
+            color: darken($Blue, 10%);
+        }
+        }
+    }
+
+}
+
+    .total-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0.5em;
+
+        .total {
+            font-size: 1.8em;
+        }
+
+        .bookTotalPrice {
+            font-size: 3em;
+            color: $Blue;
+            font-weight: bold;
+
+            span {
+                font-size: 0.6em;
+            }
+        }
+    };
+
+    .total-btn {
+        display: flex;
+        justify-content: space-between;
+        height: 4.5rem;
+            
+        button {
+            border-radius: 5px;
+            height: auto;
+            border: none;
+            color: #fff;
+            font-size: 1.9em;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .del-btn {
+            width: 30%;
+            margin-right: 1rem;
+            background: #595959;
+
+            &:hover {
+                background: lighten(#595959, 10%);
+            };
+            &:active {
+                background: darken(#595959, 10%);
+            };
+        }
+
+        .cart-btn {
+            flex: 1;
+            background: $Blue;
+
+            &:hover {
+                background: lighten($Blue, 10%);
+            };
+
+            &:active {
+                background: darken($Blue, 10%);
+            }
+        }
+    }
+
+}
+
+
+
+@media (max-width: 564px) { 
+    .order-wrap {
+        width: 30em;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .order-title b {
+            font-size: 0.8em;
+        }
+
+        .item {
+            display: block;
+            margin:  0 auto;
+            position: relative;
+
+            .bookImg {
+                margin: 0 auto;
+                padding-top: 1.2em;
+            }
+
+            .content {
+                line-height: 2.4em;
+                border-top: 1px solid rgba(0, 0, 0, 0.25);
+
+                .bookTitle {
+                    width: 100%;
+                    font-size: 1.5em;
+                };
+                .bookPrice {
+                    font-size: 1.5em;
+                };
+            }
+            .icon {
+                position: absolute;
+                bottom: -15px;
+                right: 2em;
+            }
+
+            
+        }
+        
+        .total-item {
+            .total {
+                font-size: 1.5em;
+            }
+
+            .bookTotalPrice {
+                font-size: 2.5em;
+
+                span {
+                    font-size: 0.6em;
+                }
+            }
+        }
+
+        .total-btn {
+
+            height: 4em;
+            
+            button {
+                font-size: 1.5em;
+            }
+        }
+
+    }
+}

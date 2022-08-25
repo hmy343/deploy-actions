@@ -1,0 +1,104 @@
+$dimgray : #252525;
+$powderBlue:#B0E0E6;	
+
+footer {
+    margin-top: 10em;
+    padding: 3em;
+    width: 100%;
+    height: auto;
+    background: $dimgray;
+
+    .max-wrap {
+        max-width: 960px;
+        margin: 0 auto;
+
+        .bt-logo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 2em;
+
+            h2 {
+                width: 6em;
+            
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        
+        h3 {
+            color: #fff;
+            font-size: 2em;
+            text-align: center;
+            padding-bottom: 0.5em;
+            width: 40%;
+            margin: 0 auto;
+            margin-top: 1.2em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    transition: 0.5s;
+                    color: lighten($powderBlue, 10%);
+                }
+
+                &:active {
+                    color: darken($powderBlue, 10%);
+                }
+            }
+        }
+
+        .icon {
+            color: #fff;
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        address {
+            font-size: 16px;
+            font-style: normal;
+            color: #fff;
+            margin-top: 1em;
+            display: flex;
+            justify-content: center;
+
+            div {
+                margin-top: 1em;
+            }
+
+            p {
+                line-height: 26px;
+                margin-right: 0.8em;
+                margin-left: 0.8em;
+
+           
+                a {
+                    color: rgba(255, 255, 255, 0.9);
+                    text-decoration: none;
+
+                    &:hover {
+                        transition: 0.5s;
+                        color: lighten($powderBlue, 10%);
+                    }
+    
+                    &:active {
+                        color: darken($powderBlue, 10%);
+                    }
+                    
+                }
+            }
+        }
+        
+        .copy-right {
+            text-align: center;
+            font-size: 1.3em;
+            color: #9b9b9b;
+            padding-top: 2em;
+        }
+    }
+}

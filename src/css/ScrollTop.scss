@@ -1,0 +1,44 @@
+$Blue: #00BFFF;
+
+@mixin scroll-btn() {
+    width: 6em;
+    height: 6em;
+    transition: 1s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $Blue;
+    opacity: 0.6;
+    position: fixed;
+    bottom: 4em;
+    z-index: 100;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+        background: lighten($Blue, 10%);
+        opacity: 1;
+    };
+
+    &:active {
+        background: darken($Blue, 10%);
+    }
+
+    p {
+        color: #fff;
+        font-size: 1.7em;
+        font-weight: bold;
+    }
+};
+
+.scroll-top {
+    @include scroll-btn();
+    right: -100%;
+}
+
+
+.scroll-top-on {
+    @include scroll-btn();
+    right: 3em;
+}

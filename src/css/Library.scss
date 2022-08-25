@@ -1,0 +1,113 @@
+$mdPurple: #9370DB;
+$brown: #A27B5C;
+$lightGrey: #a9a9a9;
+
+.Library {
+    width: 100%;
+    height: auto;
+
+    .max-wrap {
+        max-width: 960px;
+        margin: 0 auto;
+        background: #fff;
+           
+    .book-search {
+        text-align: center;
+        padding-top: 8em;
+
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            background: none;
+            padding-bottom: 0.5em;
+            width: 280px;
+            font-size: 2em;
+        }
+
+    }
+
+    .line {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 3.5em;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    
+    .books-option-wrap{
+        display: flex;
+        margin-top: 1.5em;
+        justify-content: space-between;
+
+        .books-orders {
+           button {
+                margin-right: 0.5em;
+                border: 1px solid $lightGrey;
+                border-radius: 10px;
+                background: none;
+                padding: 10px 15px 10px 15px;
+                color: $lightGrey;
+                cursor: pointer;
+                font-size: 1.5em;
+                
+
+                &:hover {
+                    transition: 0.5s;
+                    background: $brown;
+                    border: none;
+                    color: #fff;
+                    border: 1px solid $brown;
+                    font-weight: bold;
+                }
+
+                &:active {
+                    background: darken($brown, 10%);
+                    border: 1px solid darken($brown, 10%);
+                }
+           }
+        }
+
+        .books-option {
+            border: none;
+            border-bottom: 1px solid $lightGrey;
+            margin-top: 0.5em;
+            color: $lightGrey;
+            font-size: 1.5em;
+        }
+    }
+    
+    }
+}
+
+@media (max-width: 464px) { 
+    .Library {
+        .max-wrap {
+
+            .book-search {
+                padding-top: 4em;
+
+                input {
+                    width: auto;
+                }
+            }
+
+            .books-option-wrap {
+                justify-content: center;
+                padding-top: 1.8em;
+
+                .books-orders {
+
+                button {
+                    margin-right: 0.3em;
+                    margin-left: 0.3em;
+                    font-size: 1.2em;
+                }
+                
+            }
+                .books-option {
+                    display: none;
+                }
+            }
+        }
+    }
+}
