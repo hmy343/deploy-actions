@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useBooks from '../hooks/useBooks';
 import useActions from '../hooks/useActions';
 import { MdShoppingCart } from "react-icons/md";
@@ -12,8 +12,7 @@ import useBookInfo from '../hooks/useBookInfo';
 const BookList = () => {
 
   const { books } = useBooks();
-  const { addToOrder, onModal, updateToggle, setUpdateToggle } = useActions();
-  const { bookListCounts, setBookListCounts, handleBookListCounts } = useBookInfo();
+  const { addToOrder, onModal } = useActions();
   
   return (
     <div className='book-list-wrap'>
