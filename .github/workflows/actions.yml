@@ -18,13 +18,11 @@ jobs:
         with:
           node-versin: 16.16.0
           cache: npm
-      - name: Generate Environment Variables File for Production
+      - name: Setting .env
         run: |
-          echo "REACT_APP_KAKAO_KEY=$REACT_APP_KAKAO_KEY" >> .env
-        env:
-          REACT_APP_KAKAO_KEY: ${{ secrets.REACT_APP_KAKAO_KEY }}
+          echo "REACT_APP_KAKAO_KEY=${{ secrets.REACT_APP_KAKAO_KEY }}" >> .env
+          cat .env
       - run: npm ci
-      - run: npm install
       - run: npm test
       - run: npm run build
       - name: Deploy
