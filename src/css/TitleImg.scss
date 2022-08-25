@@ -1,0 +1,50 @@
+
+.TitleImg {
+    width: 100%;
+    height: 465px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background: url('../assets/bookImg.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+
+    .max-wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    h2 {
+        color: #fff;
+        font-size: 9em;
+    }
+}
+
+
+@media (max-width: 764px) {
+
+    .TitleImg {
+
+        height: 364px;
+
+        h2 {
+            font-size: 7em;
+        }
+    }
+
+}
+
+
+@media (max-width: 464px) {
+
+    .TitleImg {
+
+        height: 364px;
+
+        h2 {
+            font-size: 4em;
+        }
+    }
+}

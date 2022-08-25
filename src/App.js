@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MainPage from './page/MainPage';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import AppStateProvider from './providers/AppStateProvider';
+import BookDetail from './page/BookDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React : final deploy actions
-        </a>
-      </header>
+    <BrowserRouter>
+    <div>
+      <Routes>
+        <Route path='/' element={<AppStateProvider>
+          <MainPage />
+        </AppStateProvider>} />
+        <Route path='/book-detail' element={<AppStateProvider>
+          <BookDetail />
+        </AppStateProvider>} />
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
