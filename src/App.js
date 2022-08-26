@@ -7,7 +7,7 @@ import BookDetail from './page/BookDetail';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/deploy-actions'>
     <div>
       <Routes>
         <Route path='/' element={<AppStateProvider>
