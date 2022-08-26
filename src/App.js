@@ -7,7 +7,7 @@ import BookDetail from './page/BookDetail';
 
 function App() {
   return (
-    <BrowserRouter basename='https://hmy343.github.io/deploy-actions/'>
+    <BrowserRouter basename='https://hmy343.github.io/deploy-actions'>
     <div>
       <Routes>
         <Route path='/' element={<AppStateProvider>
